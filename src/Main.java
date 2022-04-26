@@ -1,17 +1,18 @@
 public class Main {
 
     public static void main(String[] args) {
-        Queens queens = new Queens();
+        int[][] arr = new int[4][4];
+//        arr[1][0] = 1;
+//        arr[3][1] = 1;
+//        arr[0][2] = 1;
 
-       queens.create(4);
-        queens.add(1);
-        queens.add(7);
-        queens.add(8);
-        if (queens.OK(3)){
-            System.out.println("nice");
-        }
-        else {
-            System.out.println("Not nice");
-        }
+//        arr[2][3] = 1;
+
+//        arr[2][0] = 1;
+//        arr[0][1] = 1;
+//        arr[3][2] = 1;
+        QueensNew queensNew = new QueensNew(arr, 4);
+        queensNew.tryStep(0);
+        queensNew.printOut();
     }
 }
