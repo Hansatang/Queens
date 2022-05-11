@@ -1,16 +1,16 @@
 import java.util.Arrays;
 
-public class QueensNew {
+public class nQueens {
     private int x;
 
     private int[][] arr;
 
-    public QueensNew(int[][] arr, int x) {
+    public nQueens(int[][] arr, int x) {
         this.arr = arr;
         this.x = x;
     }
 
-    public QueensNew(int x) {
+    public nQueens(int x) {
         this.x = x;
         arr = new int[x][x];
     }
@@ -43,30 +43,25 @@ public class QueensNew {
 
     public boolean OK(int xx, int y) {
         for (int i = 0; i < x; i++) {
-            System.out.println("A " + (xx + i));
-            System.out.println("B " + (y - i));
             try {
                 if (arr[xx - i][y - i] != 0) {
-                    System.out.println("1 check");
                     return false;
                 }
             } catch (ArrayIndexOutOfBoundsException e) {
-
+                System.out.println("Array index out of bounds");
             }
             try {
                 if (arr[xx + i][y - i] != 0) {
-                    System.out.println("2 check");
                     return false;
                 }
             } catch (ArrayIndexOutOfBoundsException e) {
-
+                System.out.println("Array index out of bounds");
             }
             if (arr[xx][i] != 0) {
-                System.out.println("3 check");
                 return false;
             }
             if (arr[i][y] != 0) {
-                System.out.println("4 check");
+
                 return false;
             }
         }
