@@ -7,7 +7,7 @@ public class Main {
         queensNew.printOut();
 
 
-//        Utopia utopia = new Utopia();
-//        System.out.println(utopia.getMinimum(15));
+        Utopia utopia = new Utopia();
+        System.out.println(utopia.getMinimum(15));
     }
 }

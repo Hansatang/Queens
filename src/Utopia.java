@@ -56,11 +56,11 @@ public class Utopia {
             int r = length;
             list.add(r);
         }
-        return getMax(list);
+        return getMin(list);
     }
 
-    public int getMax(ArrayList<Integer> list) {
-        int min = Integer.MAX_VALUE;
+    public int getMin(ArrayList<Integer> list) {
+        int min = list.get(0);
         for (Integer integer : list) {
             if (integer < min) {
                 min = integer;
